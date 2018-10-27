@@ -1,0 +1,33 @@
+#!/bin/bash
+
+echo Installing...
+
+rm -r /System/Library/LaunchDaemons/com.apple.videosubscriptionsd.plist
+
+cd /Library/LaunchDaemons
+echo "<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple Computer//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>Label</key>
+	<string>com.dpkg.EXVSD.Daemon</string>
+	<key>ProgramArguments</key>
+        <array>
+            <string>/usr/libexec/videosubscriptionsd</string>
+        </array>
+	<key>RunAtLoad</key>
+	<false/>
+	<key>Disabled</key>
+	<true/>
+	<key>KeepAlive</key>
+	<false/>
+</dict>
+</plist>" > /Library/LaunchDaemons/com.dpkg.EXVSD.Daemon.plist && chmod 644 /Library/LaunchDaemons/com.dpkg.EXVSD.Daemon.plist
+
+echo DONE!
+
+echo PLEASE REBOOT YOUR DEVICE!!!
+
+echo Oh and also keep praying my friend...
+
+exit 0

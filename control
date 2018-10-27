@@ -1,0 +1,10 @@
+Package: com.exvsd
+Name: EXVSD
+Depends: mobilesubstrate
+Version: 1.0
+Architecture: iphoneos-arm
+Description: A launchd property list file that disables Videosubscriptionsd.
+Maintainer: dpkg_
+Conflicts: com.killvsd, com.unloadvsd, com.unloadvsd2, com.byevsd
+Author: dpkg_
+Section: System
